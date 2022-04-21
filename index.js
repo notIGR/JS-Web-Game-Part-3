@@ -1,9 +1,12 @@
-function newImage(url, left, bottom){
+function move (pic, left, bot) {
+    pic.style.position = 'fixed'
+    pic.style.left = left + 'px'
+    pic.style.bottom = bot + 'px'
+}
+
+function newImage(url){
     let image = document.createElement('img')
     image.src = url
-    image.style.position = 'fixed'
-    image.style.left = left + 'px'
-    image.style.bottom = bottom + 'px'
     document.body.append(image)
     return image
 }
